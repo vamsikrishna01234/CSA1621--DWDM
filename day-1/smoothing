@@ -1,0 +1,8 @@
+data <- c(11,13,13,15,15,16,19,20,20,20,21,21,22,23,24,30,40,45,45,45,71,72,73,75)
+num_bin <- 4
+bin_width<- (max(data)-min(data))/num_bin
+bin_breaks <- seq(min(data),max(data)+bin_width,by = bin_width)
+binned_mean <- tapply(data,cut(data,breaks=bin_breaks),mean)
+binned_median <- tapply(data,cut(data,breaks=bin_breaks),median)
+binned_boundaries <- as.numeric(cut(data,breaks = bin_breaks))
+print(binned_mean)
