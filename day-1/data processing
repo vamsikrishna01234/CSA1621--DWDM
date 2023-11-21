@@ -1,0 +1,11 @@
+data <- c(200, 300, 400, 600, 1000 )
+mean <- mean(data)
+median <- median(data)
+sd <- sd(data)
+min <- min(data)
+max <- max(data)
+min_max <- (data-min)/(max-min)
+z_score <- (data-mean)/sd
+#for printing results
+cat(min_max,"\n")
+cat(z_score,"\n")
